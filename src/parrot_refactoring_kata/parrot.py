@@ -6,7 +6,7 @@ class Parrot(ABC):
     def __init__(
         self,
         number_of_coconuts: int,
-        voltage: int | float,
+        voltage: float,
         nailed: bool,
     ) -> None:
         self._number_of_coconuts = number_of_coconuts
