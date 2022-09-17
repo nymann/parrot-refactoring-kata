@@ -25,7 +25,7 @@ class ParrotFactory:
         cls,
         parrot_type: ParrotType,
         number_of_coconuts: int,
-        voltage: int | float,
+        voltage: float,
         nailed: bool,
     ) -> Parrot:
         if parrot_type not in cls._register:
