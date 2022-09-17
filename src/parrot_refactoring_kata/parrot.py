@@ -17,11 +17,5 @@ class Parrot(ABC):
     def speed(self) -> float:
         raise NotImplementedError
 
-    def _compute_base_speed_for_voltage(self, voltage: float) -> float:
-        return min([24.0, voltage * self._base_speed()])
-
-    def _load_factor(self) -> float:
-        return 9.0  # noqa: WPS432 magic-number
-
     def _base_speed(self) -> float:
         return 12.0  # noqa: WPS432 magic-number
