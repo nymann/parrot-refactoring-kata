@@ -5,4 +5,4 @@ class NorwegianBlueParrot(Parrot):
     def speed(self) -> float:
         if self._nailed:
             return 0
-        return self._compute_base_speed_for_voltage(self._voltage)
+        return min([24.0, self._voltage * self._base_speed()])
