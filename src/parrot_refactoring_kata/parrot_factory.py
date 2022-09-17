@@ -23,14 +23,14 @@ class ParrotFactory:
     @classmethod
     def create(
         cls,
-        type_of_parrot: ParrotType,
+        parrot_type: ParrotType,
         number_of_coconuts: int,
         voltage: int | float,
         nailed: bool,
-    ):
-        if type_of_parrot not in cls._register:
+    ) -> Parrot:
+        if parrot_type not in cls._register:
             raise KeyError("We don't support that parrot type yet")
-        return cls._register[type_of_parrot](
+        return cls._register[parrot_type](
             number_of_coconuts=number_of_coconuts,
             voltage=voltage,
             nailed=nailed,
